@@ -1,0 +1,147 @@
+.menu{
+	text-align: left;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.menu-item{
+	display: none;
+	align: center;
+	color: #333333;
+	font-family: Arial;
+	font-size: 16px;
+	line-height: 30px;
+	padding: 0 10px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+.menu-item:hover{
+	text-decoration: underline;
+}
+
+.icon{
+	display: inline-block;
+	width: 45px;
+	height: 35px;
+	position: relative;
+	cursor: pointer;
+}
+
+.icon span{
+	display: block;
+	position: absolute;
+	height: 9px;
+	width: 100%;
+	background: #333333;
+	border-radius: 9px;
+	left: 0;
+	transform: rotate(0deg);
+	transition: .25s ease-in-out;
+}
+
+.icon span:nth-child(1){
+	top: 0px;
+}
+.icon span:nth-child(2), .icon span:nth-child(3){
+	top: 13px;
+}
+.icon span:nth-child(4){
+	top: 26px;
+}
+
+
+@menia screen and (max-width: 1024px){
+	.icon {
+		display: list-item;
+	}
+
+	.links{
+		position: fixed;
+		display: block;
+		top: 0;
+		right:0;
+		left: 0;
+		margin-top: 52px;
+		/*background-color: rgba(0,0,0,0.2);*/
+		z-index: 1000;
+		overflow: auto;
+		opacity: 0;
+	}
+	.menu-item{
+		display: block;
+		padding: 10px 0;
+		text-align: center;
+		color: #333333;
+	}
+}
+
+.menu.menu-open .icon {
+	float: left;
+}
+
+.menu.menu-open .icon span:nth-child(1){
+	display: none;}
+
+
+.menu.menu-open .icon span:nth-child(2){
+	transform: rotate(45deg);
+}
+
+
+.menu.menu-open .icon span:nth-child(3){
+	transform: rotate(-45deg);	
+}
+
+
+.menu.menu-open .icon span:nth-child(4){
+	display: none;
+
+}
+
+
+.menu.menu-open .menu-item{
+	display: inline-block; 
+	padding-left: 30px;
+}
+
+.menu.menu-open .links{
+	opacity:1;
+}
+
+.non_val{
+	border: solid 1px red;
+}
+
+#showTab{
+	border:solid 3px; 
+}
+
+#showTab td{
+	border:solid 3px;	
+}
+
+#add_window{
+	display: none;
+}
+
+#add_teacher{
+	display: none;
+}
+
+#add_student{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
