@@ -33,17 +33,17 @@ $(document).ready(function() {
 
 </script>
 <br>
-	<div id="add_window">
+
+	<div id="add_window" style="display:block">
 		<b>status: </b>
 		<select id="status">
 			<option value="0"><p>----------</p></option>
 			<option value="1">Student</option>
 			<option value="2">Teacher</option>
 		</select>
-		
+
 		<div id="app"></div> <!--here viwes files View/addStudentView.php or View/add_teacher.php -->
 		
 	</div>
-	<div id="show_window" style="display: none"></div><!--here viwes files View/addStudentView.php or View/view_select_student.php -->
 
 		

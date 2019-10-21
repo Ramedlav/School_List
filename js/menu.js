@@ -4,15 +4,20 @@
 		});
 
 		$('#add_persone').on('click', function(){
-			$('#add_window').removeAttr('style').show();
-			$('#show_window').removeAttr('style').hide();
+			// $('#add_window').removeAttr('style').show();
+			$.ajax({
+				url: 'View/AddView.php',
+				type: 'POST',
+				dataType: 'html',
+				success:  function(data){
+					$('#show_window').html(data);
+				}
+			});
+
 		});
 		$('#show_persone').on('click', function(){
-			$('#show_window').removeAttr('style').show();
-			$('#add_window').removeAttr('style').hide();
-			var htl;
-			htl=$('#show_window').html();
-			if (htl=='<div id="tab"></div>' || !htl){
+			// $('#add_window').removeAttr('style').show();
+
 			$.ajax({
 				url: 'View/view_select_student.php',
 				type: 'POST',
@@ -20,6 +25,6 @@
 				success:  function(data){
        			$('#show_window').html(data);
    					}
-				});	}		
+				});
 		});	
 	});
