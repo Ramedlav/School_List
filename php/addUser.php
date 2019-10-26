@@ -5,7 +5,7 @@ $one = new user();
  echo('status='.$_POST['status']);
 switch ($_POST['status']) {
     case '1':
-        // check commit
+        // check commit is complit
 //    		if(!isset($_POST['status'])){$_POST['status']=' ';}
 //        	if(!isset($_POST['name'])){$_POST['name']=' ';}
 //        	if(!isset($_POST['surname'])){$_POST['surname']=' ';}
