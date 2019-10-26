@@ -27,11 +27,11 @@ echo($show);
             <th>№</th>
             <th>name</th>
             <th>surname</th>
-            <th>rating</th>
+            <th>faculty</th>
             </tr>';
 //                    print_r($show);
 for ($i=0; ($i<count($show)); $i++){
-    echo '<tr><td>'.($i+1).' </td><td> '.$show[$i]['name'].' </td><td> '.$show[$i]['surname'].' </td><td> '.$show[$i]['rating'].' </td></tr> ';
+    echo '<tr><td>'.($i+1).' </td><td> '.$show[$i]['name'].' </td><td> '.$show[$i]['surname'].' </td><td> '.$show[$i]['faculty_name'].' </td></tr> ';
 }
     echo '</table>';
 ?>

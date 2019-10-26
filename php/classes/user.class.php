@@ -34,7 +34,7 @@ class user extends dbc {
 
 
 	function SelectUser( $name, $surname, $threename, $faculty, $speciality, $group, $gender, $burn){
-		$query ="SELECT * FROM `students`,`rating` WHERE students.id = rating.id_student AND id_group = '$group' ";
+		$query ="SELECT * FROM `students`,`faculty` WHERE faculty.id = students.id_faculty AND id_group = '$group' ";
 
 		if ($name){$query.=" AND name LIKE '%".$name."%'";}
 		if ($surname){$query.=" AND surname LIKE '%".$surname."%'";}
