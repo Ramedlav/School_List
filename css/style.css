@@ -3,6 +3,10 @@
 	background-color: rgba(0,0,0,0.2);
 }
 
+.toggle{
+	cursor:pointer;
+}
+
 .menu-item{
 	display: none;
 	align: center;
@@ -128,6 +132,7 @@
 #add_student{
 	display: none;
 }
+
 
 
 
