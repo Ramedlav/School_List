@@ -124,6 +124,9 @@
 	border:solid 3px;	
 }
 
+.showTab{
+	border:solid 3px;
+}
 
 #add_teacher{
 	display: none;

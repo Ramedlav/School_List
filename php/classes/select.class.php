@@ -12,7 +12,7 @@ class Select extends dbc {
         foreach ($shower as $va){
             foreach ($va as $v=>$k){
                 if ($v!='id'){
-                    return  $v.' : ' .$k.'<br>';}
+                    return  '<tr><td>'.$v.'</td><td>' .$k.'</td></tr>';}
             }
         }
     }
