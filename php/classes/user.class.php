@@ -54,7 +54,7 @@ class user extends dbc {
 	}
 
     function ShowRating( $id ){
-        $query = "SELECT *  FROM `rating` WHERE rating.id_student = '$id'";
+        $query = "SELECT *  FROM `rating` WHERE rating.id_student = '$id' ORDER BY date, id_subject";
 //        echo $query;
         $result=$this->connect()->query($query);
         while($row = $result->fetch_assoc()){

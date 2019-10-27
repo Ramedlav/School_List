@@ -8,9 +8,10 @@ $(function () {
         $.post('php/showRating.php',{
           id: this.id
         }, function (data) {
-            iddr='rating'+id;
-
-            $('#'+iddr).html('<td>'+data+'</td>');
+            idd='rating'+id;
+            if ($('#'+idd).html()){
+                $('#'+idd).html('');}else
+            {$('#'+idd).html('<td>'+data+'</td>');}
       });
     });
 });
