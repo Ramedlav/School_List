@@ -12,6 +12,7 @@ $(function () {
             if ($('#'+idd).html()){
                 $('#'+idd).html('');}else
             {$('#'+idd).html('<td>'+data+'</td>');}
+            console.log(data);
       });
     });
 });
