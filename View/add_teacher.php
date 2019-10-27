@@ -35,7 +35,8 @@ $('#Teacher_Add').bind("click",function() {
             status: $('#status').val(),
             name: $('#name').val(),
             surname: $('#surname').val(),
-            father_name: $('#threename').val()
+            threename: $('#threename').val(),
+            deportaments: $('#deportaments').val(),
         }, function(data){
             console.log($('#status').val());
         });
@@ -54,6 +55,12 @@ $('#Teacher_Add').bind("click",function() {
 	<b>threename: </b>
 	<input type="text" id="threename" name="threename" value="" class="check">
 	<br>
+    <b>deportament: </b>
+    <select id="deportaments" name="name_deportament">
+        <option value="0">Programming ingenery</option>
+        <option value="1">apply math</option>
+    </select>
+    <br>
 	<input type="button" name="down" value="Cancel">
 	<input type="button" name="send" value="OK" id="Teacher_Add">
 	<br>

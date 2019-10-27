@@ -3,8 +3,16 @@
 
 $(function () {
     $('.toggle').on('click', function () {
-        alert('1');
-    })
+        console.log('what?');
+        id=this.id;
+        $.post('php/showRating.php',{
+          id: this.id
+        }, function (data) {
+            iddr='rating'+id;
+
+            $('#'+iddr).html('<td>'+data+'</td>');
+      });
+    });
 });
 
 </script>

@@ -56,7 +56,7 @@
 		gender: $('#gender').val(),
 		burn: $('#burn').val()
 	   	}, function(data){
-		    console.log(data);
+		    // console.log(data);
     	   	$('#tab').html(data); // catch data from showUser.php
 			});
 		

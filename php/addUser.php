@@ -28,15 +28,15 @@ switch ($_POST['status']) {
 echo "Student is added";
         break;
     case '2':
-    		if(!isset($_POST['status'])){$_POST['status']=' ';}
-        	if(!isset($_POST['name'])){$_POST['name']=' ';}
-        	if(!isset($_POST['surname'])){$_POST['surname']=' ';}
-        	if(!isset($_POST['threename'])){$_POST['threename']=' ';}
+//    		if(!isset($_POST['status'])){$_POST['status']=' ';}
+//        	if(!isset($_POST['name'])){$_POST['name']=' ';}
+//        	if(!isset($_POST['surname'])){$_POST['surname']=' ';}
+//        	if(!isset($_POST['threename'])){$_POST['threename']=' ';}
         $one->AddTeacher(
-        	$_POST['status'],
         	$_POST['name'],
         	$_POST['surname'],
-        	$_POST['threename']);
+        	$_POST['threename'],
+            $_POST['deportaments']);
 echo "Teacher is added";
         break;
 }

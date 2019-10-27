@@ -21,7 +21,7 @@ $one = new user();
         	$_POST['group'],
         	$_POST['gender'],
         	$_POST['burn']);
-echo($show);
+//echo($show);
 //return this data at Ajax in view_select_student.php
     echo '<table id="showTab">';
     echo    '<tr>
@@ -32,7 +32,8 @@ echo($show);
             </tr>';
 //                    print_r($show);
 for ($i=0; ($i<count($show)); $i++){
-    echo '<tr class="toggle"><td>'.($i+1).' </td><td> '.$show[$i]['name'].' </td><td> '.$show[$i]['surname'].' </td><td> '.$show[$i]['faculty_name'].' </td></tr> ';
+    echo '<tr class="toggle" id='.$show[$i]['id'].'><td>'.($i+1).' </td><td> '.$show[$i]['name'].' </td><td> '.$show[$i]['surname'].' </td><td> '.$show[$i]['faculty_name'].' </td></tr> ';
+	echo '<tr id="rating'.$show[$i]['id'].'"></tr>';
 }
     echo '</table>';
 ?>
