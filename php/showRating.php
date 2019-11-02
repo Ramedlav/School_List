@@ -8,30 +8,35 @@ if ($show) {
 //    print_r($show);
     foreach ($show as $val) {
         $TableName = "subjects";
-        $select= new Select();
+        $Table_Name = "teachers";
+        $select_name = new Select();
+        $select = new Select();
+        $teacher = $select->SelectItem($Table_Name,$val['id_teacher']);
         $subject= $select->SelectItem($TableName,$val['id_subject']);
-        $Arr[$subject][$val['date']]=$val['rating'];
+        $Arr[$subject][$val['date']][$teacher][]=$val['rating'];
     }
-    print_r($Arr);
+//    print_r($Arr);
+    echo '<table>';
+    foreach ($Arr as $val=>$sub){
+        echo '<tr><th>'.$val.'</th></tr>';
+        echo "<tr>";
+        foreach ($sub as $key=>$gen){
+            echo '<td>'.$key.'</td>';
+        }
+        echo "</tr>";
+        echo "<tr>";
+        foreach ($sub as $key=>$gen){
+            echo '<td>';
+            foreach ($gen as $teach=>$num) {
+                foreach ($num as $i=>$rating){
+                    echo ' <b class="showName" data-title=" '.$teach.' ">'.$rating.'</b>';
+                }
+            }
+            echo '</td>';
+        }
+        echo "</tr>";
+    }
+    echo '</table>';
 
-
-
-// $i=0;
-//    foreach ($show as $val) {
-//        echo '<br>';
-//        foreach ($val as $key => $value) {
-//            echo $i++;
-//            if ($key=='id_subject'&&$check!=$value){
-//                $check=$value;
-//                $TableName = "subjects";
-//                $select= new Select();
-//                $subject= $select->SelectItem($TableName,$value);
-//                echo $subject;
-//            }
-//            if ($key=='rating'){
-//                echo '<td>' . $value . '</td> ';
-//            }
-//        }
-//    }
 }
 ?>

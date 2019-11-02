@@ -124,6 +124,10 @@
 	border:solid 3px;	
 }
 
+.showName:hover::after{
+	content: attr(data-title);
+}
+
 .showTab{
 	border:solid 3px;
 }

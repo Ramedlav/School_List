@@ -1,5 +1,4 @@
 <?php
 include 'php/header.php';
-
-include 'View/admin_office.php';
+include 'View/teacher_office.php';
 ?>

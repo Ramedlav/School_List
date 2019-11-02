@@ -4,7 +4,6 @@
 		});
 
 		$('#add_persone').on('click', function(){
-			// $('#add_window').removeAttr('style').show();
 			$.ajax({
 				url: 'View/AddView.php',
 				type: 'POST',
@@ -15,9 +14,8 @@
 			});
 
 		});
-		$('#show_persone').on('click', function(){
-			// $('#add_window').removeAttr('style').show();
 
+		$('#show_persone').on('click', function(){
 			$.ajax({
 				url: 'View/view_select_student.php',
 				type: 'POST',
@@ -26,5 +24,17 @@
        			$('#show_window').html(data);
    					}
 				});
-		});	
+		});
+
+		$('#open_jurnal').on('click', function(){
+			$.ajax({
+				url: 'View/open_jurnal.php',
+				type: 'POST',
+				dataType: 'html',
+				success:  function(data){
+					$('#show_window').html(data);
+				}
+			});
+
+		});
 	});

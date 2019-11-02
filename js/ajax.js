@@ -11,7 +11,6 @@
 			data: {
 				name: $('#name').val(), 
 				surname: $('#surname').val(),
-				// faculty: $('#faculty').val(),
 				speciality: $('#speciality').val(),
 				faculty: $('#faculty').val(),
 				group: $('#group').val()},
