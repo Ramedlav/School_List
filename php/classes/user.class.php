@@ -20,10 +20,11 @@ class user extends dbc {
 
 
 	function AddTeacher($name,$surname,$threename,$deportaments){
-		$query ="INSERT INTO `teachers`(`teacher_name`, `teacher_surname`, `teacher_three_name`, `deportament` ) VALUES ('$name','$surname','$threename','$deportaments')";
+		$query ="INSERT INTO `teachers`(`teacher_name`, `teacher_surname`, `teacher_three_name`, `faculty` ) VALUES ('$name','$surname','$threename','$deportaments')";
 		$this->connect()->query($query);
 		echo ' accept';
 	}
+
 	 function loginUser ($name, $password){
 		$sql ="SELECT * FROM `students` WHERE login = '$name' AND password = '$password'";
 		$result = $this->connect()->query($sql);

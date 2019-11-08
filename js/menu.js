@@ -28,7 +28,7 @@
 
 		$('#open_jurnal').on('click', function(){
 			$.ajax({
-				url: 'View/open_jurnal.php',
+				url: 'View/jornalView.php',
 				type: 'POST',
 				dataType: 'html',
 				success:  function(data){
